@@ -35,7 +35,11 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 
 const mongoDB = process.env.MONGODB_URL;
-main().catch((err) => console.log(err));
+
+/* AFTER STORING "MONGODB_URL" VALUE IN ".env"
+   UNCOMMENT LINE BELOW */
+
+// main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(mongoDB);
